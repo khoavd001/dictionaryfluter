@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:audioplayers/audioplayers.dart';
 import 'package:dictionary_app/Model/model.dart';
 import 'package:dictionary_app/Services/service.dart';
@@ -126,7 +128,8 @@ class _HomePageState extends State<HomePage> {
                                                         .phonetics![index]
                                                         .audio;
 
-                                                    playAudio("https:$path");
+                                                    playAudio("$path");
+                                                    log("$path");
                                                   },
                                                   icon: const Icon(
                                                       Icons.audiotrack)),
